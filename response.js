@@ -13,7 +13,17 @@ app
         //     I´ts time for express
         // </h1>
         // `)    
-        res.redirect(301,'/asdsad')
+        res.redirect(301,'http://github.com/alejomateus')
+    })
+    .get('/json',(req,res)=>{
+        res.json({
+            name:"Alejandro",
+            year:22,
+            time: new Date()
+        })
+    })
+    .get('/render',(req,res)=>{
+        res.render(`${__dirname}/assets/index.html`)
     })
 
     .listen(5001)
